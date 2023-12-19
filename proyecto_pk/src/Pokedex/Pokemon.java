@@ -123,7 +123,8 @@ public class Pokemon {
     }
 
     void agregarMovs(String nombre){
-        mov[numMovs] = new Movimientos()
+        mov[numMovs] = new Movimientos(nombre);
+        numMovs++;
     }
 
     //Métodos
@@ -295,6 +296,24 @@ public class Pokemon {
 
     public String aparicionPKSalvaje(){
         return ("Ha aparecido un " + nombre + " salvaje!!");
+    }
+//Listado de los movimientos disponibles para cada pokemon
+    public String listaMovsPokemon(int numPokedex) {
+        switch(numPokedex){
+            case 1: return ("Movimientos disponibles de Sprigatito: " + 
+                    "\n - Fitoimpulso " + " Planta " + " Precisión 100 " + " Potencia 55 " +  
+                    "\n - Tormenta Floral " + " Planta " + " Precisión 100 " + " Potencia 90 " +  
+                    "\n - Carantoña " + " Hada " + " Precisión 90 " + " Potencia 90 " +  
+                    "\n - Garra Umbria " + " Fantasma " + " Precisión 100 " + " Potencia 70 " 
+            );
+            case 4: return ("Movimientos disponibles de Sprigatito: " + 
+                    "\n - Fitoimpulso " + " Planta " + " Precisión 100 " + " Potencia 55 " +  
+                    "\n - Tormenta Floral " + " Planta " + " Precisión 100 " + " Potencia 90 " +  
+                    "\n - Carantoña " + " Hada " + " Precisión 90 " + " Potencia 90 " +  
+                    "\n - Garra Umbria " + " Fantasma " + " Precisión 100 " + " Potencia 70 " 
+            );
+            default: return "";
+        }
     }
 
 }

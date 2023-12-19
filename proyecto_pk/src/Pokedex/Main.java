@@ -3,6 +3,12 @@ import java.util.Scanner;
 //Beta solo de Sprigatito y Fuecoco
 public class Main {
     static Scanner sc = new Scanner(System.in);
+
+    void elegirMovs(Pokemon pk1){
+        System.out.println(pk1.listaMovsPokemon(pk1.getNumPokedex()));
+        System.out.println("Introduzca el nombre del primer movimiento");
+    }
+
     static void interfazCombate(Pokemon pk1, Pokemon pkSalvaje){
         do{
             System.out.println(pk1.textoInterfazCombate());

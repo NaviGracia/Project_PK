@@ -3,7 +3,7 @@ package Pokedex;
 public class Movimientos {
     private String nombre;
     private int potencia = averiguarPotencia(nombre);
-    private int precisión = averiguarPrecision(nombre);
+    private int precision = averiguarPrecision(nombre);
     private String tipo = averiguarTipo(nombre);
     /*
      * pp
@@ -23,11 +23,15 @@ public class Movimientos {
     public void setPotencia(int potencia) {
         this.potencia = potencia;
     }
-    public int getPrecisión() {
-        return precisión;
+    public int getPrecision() {
+        return precision;
     }
-    public void setPrecisión(int precisión) {
-        this.precisión = precisión;
+    public void setPrecision(int precisión) {
+        this.precision = precision;
+    }
+//Constructores
+    public Movimientos(String nombre){
+        this.nombre = nombre;
     }
 
     private int averiguarPotencia(String nombre){
