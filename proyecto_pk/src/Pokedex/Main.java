@@ -4,9 +4,12 @@ import java.util.Scanner;
 public class Main {
     static Scanner sc = new Scanner(System.in);
 
-    void elegirMovs(Pokemon pk1){
+    static void elegirMovs(Pokemon pk1){
+        System.out.println("Ahora eliga los movimientos:");
         System.out.println(pk1.listaMovsPokemon(pk1.getNumPokedex()));
-        System.out.println("Introduzca el nombre del primer movimiento");
+        System.out.println("Introduzca el nombre del primer movimiento: ");
+        String mov = sc.nextLine();
+        pk1.agregarMovs(mov);
     }
 
     static void interfazCombate(Pokemon pk1, Pokemon pkSalvaje){
@@ -31,7 +34,7 @@ public class Main {
     }
     public static void main(String[] args) throws Exception {
         String comprobacion;
-        do{
+        /*do{
             System.out.println("Bienvenido a la Pokédex de Paldea (9ª Generación)!!");
             System.out.println("Presione 'Enter' para iniciar la Pokédex o escriba 'Exit' para cerrar la Pokédex.");
             comprobacion = sc.nextLine();
@@ -45,12 +48,15 @@ public class Main {
                     if (eleccionNumero==1) {
                         Pokemon pk1 = new Pokemon();
                         System.out.println(pk1.toString());
+                        elegirMovs(pk1);
                         encuentroSalvaje(pk1);
+                        interfazCombate(pk1, pk1);
                     } if (eleccionNumero==2) {
                         System.out.println("Ingrese el nº del pokemon que desea seleccionar (Actualmente del 1 al 10)");
                         int nPokedex = sc.nextInt();
                         Pokemon pk1 = new Pokemon(nPokedex, "");
                         System.out.println(pk1.toString());
+                        elegirMovs(pk1);
                     }else{
                         System.out.println("Nº Incorrecto.");
                     }
@@ -59,6 +65,7 @@ public class Main {
                     String nomPk = sc.nextLine();
                     Pokemon pk2 = new Pokemon(eleccion, nomPk, 0);
                     System.out.println(pk2.toString());
+                    elegirMovs(pk2);
                     encuentroSalvaje(pk2);
                     interfazCombate(pk2, pk2);
                 }
@@ -66,7 +73,7 @@ public class Main {
                 System.out.println("Pokédex Cerrada!! Vuelva a utilizarme siempre que no sepa el tipo de un pokémon!!");
             }
         } while(!comprobacion.equalsIgnoreCase("Exit"));
-
+*/
 
     }
 }
